@@ -1,14 +1,21 @@
-import math
 x, y = map(int, input().split())
-if x == y:
-    print(-1)
-else:    
-    z = (y*100)//x
-    n = 1
-    while True:
-        c = (y+n)*100//(x+n)
-        if c > z:
-            print(n)
-            break
+rate = 100*y // x
+if y >= x * 0.99:
+    print(-1)    
+else:
+    l = 0
+    r = x
+    while l<r:
+        mid = (l + r)//2
+        ny = mid + y
+        nx = mid + x
+        nr = ny*100//nx
+        if nr > rate:
+            r = mid
         else:
-            n += 1
+            l = mid+1
+    print(r)        
+                
+            
+        
+        
