@@ -1,21 +1,21 @@
-n = input()
-l = len(n)    
-num = 10**l + int(n)
+w = input()   
 arr = [6,2,5,5,4,5,6,3,7,5]
-t = 0
+idx = [int(x) for x in w]
+num = 0
 cnt = 0
-s = str(num)
-temp = num
-while temp > 9:
-    temp, d = divmod(temp, 10)
-    t += arr[d]
+def up(n, idx):
+    if n < 0:
+        return 0
+    if idx[n] <9:
+        idx[n] += 1
+        return arr[idx[n]] - arr[idx[n]-1]
+    else:
+        idx[n] = 0
+        return up(n-1, idx) + 1
 while True:
-    cnt += 1
-    num2 = num + cnt
-    ans = 0
-    while num2 > 9:
-        num2, d = divmod(num2, 10)
-        ans += arr[d]
-    if ans == t:
+    num += up(len(w)-1, idx)
+    if  num == 0:
         break
-print(cnt) 
+    else:
+        cnt +=1
+print(cnt)  
