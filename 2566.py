@@ -1,5 +1,5 @@
 arr = [list(map(int, input().split())) for _ in range(9)]
-big = 0
+big = -1
 idx = (0,0)
 for i in range(9):
     for j in range(9):
