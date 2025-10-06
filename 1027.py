@@ -17,9 +17,8 @@ for i in range(n):
         g = (buildings[p] - buildings[i]) / (p-i)
         if g > grad:
             cnt += 1
-            grad = g
-    debug.append(cnt)        
+            grad = g      
     if ans < cnt:
         ans = cnt
 print(ans)
-print(debug)        
+     

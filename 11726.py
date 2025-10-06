@@ -3,4 +3,4 @@ n = int(input())
 for i in range(n):
     if len(arr) <= i:
         arr.append(arr[i-2]+arr[i-1])
-print(arr[n-1])    
+print(arr[n-1]%10007)    

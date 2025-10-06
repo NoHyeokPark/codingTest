@@ -16,4 +16,7 @@ for _ in range(n):
                 q.popleft()
             else:
                 q.pop()
-print(''.join(q))                
+if q:
+    print(''.join(q))
+else:
+    print(0)                    

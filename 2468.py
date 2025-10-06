@@ -20,7 +20,6 @@ def rain(arr, siz):
                                 visit[ny][nx] = False
                                 q.append((ny, nx))
         ans.append(cnt)                        
-    print(ans)
     return ans                                
 n = int(input())
 area = [list(map(int, input().split())) for _ in range(n)]

@@ -12,5 +12,6 @@ for i in range(n):
     dic[s[i]] -= 1
     if i >= m:
         dic[s[i-m]] += 1
-    cnt += check(dic)
+    if i >= m-1:    
+        cnt += check(dic)
 print(cnt)        
