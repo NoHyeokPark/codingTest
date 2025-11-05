@@ -1,5 +1,4 @@
 arr = [0] * 7
-print(arr)
 q = list(map(int, input().split()))
 while q:
     a = q.pop()
@@ -10,6 +9,5 @@ for i in range(7):
     if arr[i] == 2:
         arr[i] = 1000+(i*100)
     if arr[i] == 3:
-        arr[i] = 1000*i +10000
-print(arr)        
+        arr[i] = 1000*i +10000     
 print(max(arr))        
