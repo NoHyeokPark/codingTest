@@ -11,6 +11,6 @@ while True:
     for i in range(b-1):
         ans += days[i]
     ans += a
-    if b > 1:
+    if b > 2:
         ans += yun
     print(ans)    
