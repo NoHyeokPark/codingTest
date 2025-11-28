@@ -1,6 +1,5 @@
 y,x = map(int, input().split())
 arr = [[True]*y,[True]*x]
-
 for i in range(y):
     for j, e in enumerate(input()):
         if e == 'X':
